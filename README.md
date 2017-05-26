@@ -1,1 +1,0 @@
-# hnaomin.github.io
