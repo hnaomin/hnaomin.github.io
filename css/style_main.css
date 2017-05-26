@@ -1,0 +1,41 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+    background: #94D0FF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#C774E8, #94D0FF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#C774E8, #94D0FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#C774E8, #94D0FF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#C774E8, #94D0FF); /* Standard syntax (must be last) */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rainbow {
+    min-height: 100vh;  /* min height incase content is higher than window height */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* styles */
+body {
+    text-align: center;
+    line-height: 1.618;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* rainbow */
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

@@ -1,0 +1,97 @@
+/* transition */
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    background-color: #bc010c;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 1s ease;
+}
+
+/* panel styles */
+.panel {
+    min-height: 100vh;  /* min height incase content is higher than window height */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    
+/* colors */
+.color-start {
+  background-color: #bc010c;
+}
+.color-1 {
+  background-color: #0119ff;
+}
+.color-2 {
+  background-color: #f3080f;
+}
+
+
+/* styles */
+body {
+    text-align: center;
+    line-height: 1.618;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1.618em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+/* link */
+.panel a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+}
+
+.panel a:hover {
+    color: #fff;
+}
+
+.panel a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.panel a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/* for scroll down */
+body, html, .main {
+    height: 100%;
+}
+
+section {
+    min-height: 100%;
+}
+
+/* scroll fade */
+.fade {
+  opacity: 1;
+}
