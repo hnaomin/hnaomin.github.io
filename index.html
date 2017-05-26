@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hyojin Naomi Noh</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="css/style_index.css" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/randomplay.js"></script>
+    </head>
+    
+    <body>
+        <!-- menu -->
+        <div id="sidenav" class="sidenav">
+            <div class="menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+                <a href="#open">About</a>
+                <div class="about" id="open">
+                    <div>
+                        <h1>Hyojin Naomi Noh</h1>
+                        Pronounced <i>he-o-jin</i>, 2 syllables<br/>
+                        Visual artist and textile designer based in NJ & NYC<p/>
+                        <p>
+                            This site exists as a digital portfolio featuring some of my best work.
+                            My designs mostly involve conceptual and illustrative conversational and abstract prints in a variety of mediums.
+                            My designs intend to be narrative or playful, evoking thoughts and sentiments.
+                        </p>
+                        <a href="http://linkedin.com/in/hyojinnaomi" target="_blank">Check out my resume</a><br/>
+                        <h3>Reach me at:</h3>
+                        <a href="mailto:info@hyojinnaomi.com">info@hyojinnaomi.com</a><br/>
+                        <a href="http://www.instagram.com/youcancallmenaomi" target="_blank">@youcancallmenaomi</a>
+                        <a href="#close" class="close">&times;</a>
+                    </div>
+                </div>
+                
+                <a href="#">2017</a>
+                <ul class="hide">
+                    <a href="work/2017/thesis.html" class="submenu" target="main">Fantastic Planet</a>
+                </ul>
+                <a href="#">2016</a>
+                <ul class="hide">
+                    <a href="work/2016/suspiria.html" class="submenu" target="main">Wovens</a>
+                    <a href="work/2016/jacquard.html" class="submenu" target="main">Jacquard</a>
+                    <a href="work/2016/toiles.html" class="submenu" target="main">Toile Collection</a>
+                    <a href="work/2016/scarves.html" class="submenu" target="main">Scarves</a>
+                </ul>
+                <a href="#">2015</a>
+                <ul class="hide">
+                    <a href="work/2015/kaledo.html" class="submenu" target="main">CAD</a>
+                    <a href="work/2015/tibet.html" class="submenu" target="main">Wovens</a>
+                </ul>
+            </div>
+            
+            <p />
+            <!-- music player -->
+            <div id="player"></div>
+        </div>
+
+        <!-- nav button -->
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        
+        <!-- iframe -->
+        <iframe src="main.html" name="main" id="main" width="100%" height="100%" frameborder="0"></iframe>
+        
+        <!-- drop down menu script -->
+        <script>
+            $(document).ready(function(){
+                $(".menu>a").click(function(){
+                    var submenu = $(this).next("ul");
+                    
+                    if( submenu.is(":visible") ){
+                        submenu.slideUp();
+                    }else{
+                        submenu.slideDown();
+                    }
+                });
+            });
+        </script>
+        
+    </body>
+</html>

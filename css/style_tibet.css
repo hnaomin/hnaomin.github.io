@@ -1,0 +1,111 @@
+/* transition */
+body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+    background-color: #dd2266;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 1s ease;
+}
+
+/* panel styles */
+.panel {
+    min-height: 100vh;  /* min height incase content is higher than window height */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* intro */
+#start {
+    height: 100%;
+    background: #dd2266; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#0a9bdc, #dd2266); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0a9bdc, #dd2266); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0a9bdc, #dd2266); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#0a9bdc, #dd2266); /* Standard syntax (must be last) */
+}
+    
+/* colors */
+.color-bright {
+  background-color: #dd2266;
+}
+.color-dark {
+  background-color: #223344;
+}
+
+
+/* styles */
+body {
+    text-align: center;
+    line-height: 1.618;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1.618em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* rainbow */
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* link */
+#start a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+#start a:hover {
+    color: #0EA1D9;
+}
+
+#start a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0EA1D9;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#start a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/* for scroll down */
+body, html, .main {
+    height: 100%;
+}
+
+section {
+    min-height: 100%;
+}
+
+/* scroll fade */
+.fade {
+  opacity: 1;
+}
