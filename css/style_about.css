@@ -16,7 +16,7 @@ body {
 /* mobile */
 @media screen and (max-width: 600px) {
     html, body {
-        margin: 0;
+        margin-left: 5%;
         display: -webkit-flex; /* Safari */
         -webkit-flex-wrap: wrap; /* Safari 6.1+ */
         display: flex;   
