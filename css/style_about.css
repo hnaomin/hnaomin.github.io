@@ -1,39 +1,38 @@
-html{
-    margin: 0px;
-    padding: 20px;
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    margin-left: 10%;
     color: #000;
     background: #fff;
 }
 
 body {
-    border: 0px;
-	box-sizing: border-box;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
 }
 
 /* mobile */
 @media screen and (max-width: 600px) {
-	body {
-        margin: 0px;
-		display: flex;
-		flex-wrap: wrap;
+    html, body {
+        margin: 0;
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+        display: flex;   
+        flex-wrap: wrap;   
 	}
-    span {
-        font-size: 25px;
-  }
+    p, h1, span {
+        font-size: 20px;
+    }
 }
 
 
 /* text */
 div {
-    margin-left: 10%;
+    position: absolute;
     border: none;
-    padding: 0px;
+    padding: 20px;
 }
 
 h1 {
