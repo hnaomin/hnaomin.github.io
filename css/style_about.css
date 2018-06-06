@@ -40,14 +40,13 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     line-height: 1.5em;
-    margin-bottom: 4px;
+    padding-bottom: 0.5px;
 }
 
 p {
     text-align: justify;
     text-justify: inter-word;
     white-space: normal;
-    margin-bottom: 4px;
 }
 
 .highlight {
