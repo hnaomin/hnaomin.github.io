@@ -1,9 +1,9 @@
 body{
     max-width: 900px;
     float: none;
-    margin: 50px auto auto; 
+    margin: 4% auto auto; 
 }
-#portfolio {  
+#portfolio {
     margin: 1rem 0;
     -webkit-column-count: 3; 
     -moz-column-count: 3;
@@ -20,8 +20,8 @@ body{
     transform: scale(0);
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
-
 }
+
 .tile:hover { 
 
 }
@@ -52,11 +52,26 @@ p:hover {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-  
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+figure img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+figure:hover img {
+  opacity: .5;
 }
 
 .btn {
-    font-family: Work Sans;
+    font-family: Montserrat, Work Sans;
     font-size: 1rem;
     font-weight: normal;
     text-decoration: none;
@@ -75,11 +90,9 @@ p:hover {
 
 .btn:hover {
     text-decoration: none;
-    color: #fff;
+    color: #ccc;
     transition: 0.3s;
 }
-
-
 
 .btn:focus {
   outline: none;
