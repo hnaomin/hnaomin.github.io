@@ -2,11 +2,11 @@ html {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
-    left: 10%;
     color: #000;
 }
 
 body {
+    margin-left: 10%;
     overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@ body {
 /* mobile */
 @media screen and (max-width: 600px) {
     html, body {
-        left: 5%;
+        margin-left: 5%;
         display: -webkit-flex; /* Safari */
         -webkit-flex-wrap: wrap; /* Safari 6.1+ */
         display: flex;   
