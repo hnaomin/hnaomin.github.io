@@ -18,10 +18,12 @@ body {
 @media screen and (max-width: 600px) {
     html, body {
         margin-left: 5%;
+        height: 100vh;
         display: -webkit-flex; /* Safari */
         -webkit-flex-wrap: wrap; /* Safari 6.1+ */
         display: flex;   
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
+        -webkit-overflow-scrolling: touch;
 	}
     p, h1, span {
         font-size: 0.7em;
