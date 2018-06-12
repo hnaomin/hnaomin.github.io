@@ -1,7 +1,8 @@
 body{
     max-width: 900px;
     float: none;
-    margin: 5vw auto;
+    margin: 5rem auto;
+    padding: 1rem;
 }
 #portfolio {  
     margin: 1rem 0;
