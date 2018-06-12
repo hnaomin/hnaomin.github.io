@@ -35,6 +35,11 @@ body{
     transform: scale(1);
 }
 
+.tile a { 
+    pointer-events: auto;
+    cursor: pointer;
+}
+
 .tile img {
     max-width: 100%;
     width: 100%;
