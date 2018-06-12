@@ -200,7 +200,8 @@ body, html {
 
 /* iframe */
 iframe #main {
-    position:fixed;-webkit-overflow-scrolling:touch;
+    position:fixed;
+    overflow: auto; -webkit-overflow-scrolling: touch;
     left: 0;
     top: 0;
     width: 100%;
