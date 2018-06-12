@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="keywords" content="Hyojin Naomi Noh, prints, patterns, textile, repeats, design, designer">
+        <meta name="keywords" content="Hyojin Naomi Noh, prints, patterns, textile, repeats, print design, textile design">
         <meta name="description" content="Hyojin Naomi Noh Design" />
         <meta name="robots" content="noarchive" />
         <meta name="googlebot" content="noarchive" />
@@ -96,7 +96,7 @@
         
         <!-- iframe -->
         <div class="scroll-wrapper">
-            <iframe src="main.html" name="main" frameborder="0"></iframe>
+            <iframe src="main.html" name="main" border="0"></iframe>
         </div>
         
         
@@ -117,6 +117,22 @@
                     }
                 });
             });
+        </script>
+        
+        <!-- ios -->
+        <script type="text/javascript">
+            $(function(){
+                if (/iPhone|iPod|iPad/.test(navigator.userAgent))
+                    $('iframe').wrap(function(){
+                        var $this = $(this);
+                        return $('<div />').css({
+                            width: $this.attr('width'),
+                            height: $this.attr('height'),
+                            overflow: 'auto',
+                            '-webkit-overflow-scrolling': 'touch'
+                        });
+                    });
+            })
         </script>
         
     </body>
