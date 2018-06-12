@@ -199,9 +199,14 @@ body, html {
 
 
 /* iframe */
-iframe #main {
-    position:fixed;
+.wrapper {
     overflow: auto; -webkit-overflow-scrolling: touch;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+iframe {
+    position:fixed;
     left: 0;
     top: 0;
     width: 100%;
