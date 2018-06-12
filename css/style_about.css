@@ -13,18 +13,21 @@ p {
 h1 {
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.5;
     
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (max-width: 40em) {
     body {
-        width: 80%;
+        padding: 1rem;
     }
-    
+    p {
+    text-align: justify;
+    white-space: normal;
+    }
     h1 {
-        font-size: 1.75vw;
+        font-size: 1em;
     }
 }
 
