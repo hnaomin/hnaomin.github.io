@@ -4,7 +4,6 @@ body {
     color: #000;
 }
 
-
 p {
     text-align: justify;
     white-space: normal;
@@ -21,10 +20,6 @@ h1 {
 @media screen and (max-width: 40em) {
     body {
         padding: 1rem;
-    }
-    p {
-    text-align: justify;
-    white-space: normal;
     }
     h1 {
         font-size: 1em;
