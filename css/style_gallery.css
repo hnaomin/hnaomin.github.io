@@ -1,12 +1,12 @@
 body{
     max-width: 900px;
     float: none;
-    margin: 3rem auto;
-    padding: 0.5rem;
+    margin: auto;
+    margin-top: 4rem;
     position: relative;
 }
 #portfolio {  
-    margin: 1rem auto;
+    margin: 1rem;
     -webkit-column-count: 3; 
     -moz-column-count: 3;
     column-count: 3;
@@ -17,15 +17,18 @@ body{
     -moz-column-width: 33.33333333333333%;
     column-width: 33.33333333333333%;
 }
+
+
+.toolbar .btn {
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
 .tile { 
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
-
-}
-.tile:hover { 
-
 }
 
 .scale-anm {
