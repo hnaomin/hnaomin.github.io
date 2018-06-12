@@ -1,7 +1,7 @@
 body{
-  max-width: 900px;
-  float: none;
-  margin: auto; 
+    max-width: 900px;
+    float: none;
+    margin: 5vw auto;
 }
 #portfolio {  
     margin: 1rem 0;
@@ -27,37 +27,60 @@ body{
 }
 
 .scale-anm {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 
 p{ 
-  padding:10px; 
-  border-bottom: 1px #ccc dotted; 
-  text-decoration: none; 
-  font-family: lato; 
-  text-transform:uppercase; 
-  font-size: 12px; 
-  color: #333; 
-  display:block; 
-  float:left;
+    padding:10px; 
+    border-bottom: 1px #ccc dotted; 
+    text-decoration: none; 
+    font-family: lato; 
+    text-transform:uppercase; 
+    font-size: 12px; 
+    color: #333; 
+    display:block; 
+    float:left;
 }
 
 p:hover { 
-  cursor:pointer; 
-  background: #333; 
-  color:#eee; }
+    cursor:pointer; 
+    background: #333; 
+    color:#eee; }
 
 .tile img {
     max-width: 100%;
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-  
 }
 
+.tile:hover img {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .btn {
-    font-family: Lato;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: normal;
     text-decoration: none;
@@ -70,12 +93,14 @@ p:hover {
     border: 1px solid;
     vertical-align: middle;
     -webkit-appearance: none;
-    color: #555;
+    color: #000;
     background-color: rgba(0, 0, 0, 0);
 }
 
 .btn:hover {
-  text-decoration: none;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
 }
 
 .btn:focus {
