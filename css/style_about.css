@@ -20,6 +20,7 @@ h1 {
 @media screen and (max-width: 40em) {
     body {
         padding: 1rem;
+        margin-top: 5vw;
     }
     h1 {
         font-size: 1em;
