@@ -3,10 +3,10 @@ body{
     float: none;
     margin: auto;
     margin-top: 4rem;
+    padding: 1rem;
     position: relative;
 }
 #portfolio {  
-    margin: 1rem;
     -webkit-column-count: 3; 
     -moz-column-count: 3;
     column-count: 3;
@@ -20,7 +20,7 @@ body{
 
 
 .toolbar .btn {
-    margin-left: 6px;
+    margin-left: 2px;
     margin-top: 6px;
 }
 
