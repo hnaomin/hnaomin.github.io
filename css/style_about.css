@@ -1,64 +1,33 @@
-html {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+body {
+    width: 80%;
+    margin: 5vw auto;
     color: #000;
 }
 
-body {
-    margin-left: 10%;
-    overflow-x: hidden;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-/* mobile */
-@media screen and (max-width: 600px) {
-    html, body {
-        margin-left: 5%;
-        height: 100vh;
-        display: -webkit-flex; /* Safari */
-        -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-        display: flex;   
-        flex-wrap: wrap;
-	}
-    p, h1, span {
-        font-size: 0.7em;
-    }
-}
-
-
-/* text */
-div {
-    position: absolute;
-    border: none;
-    display: block;
-    padding: 20px;
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    line-height: 1.5em;
-}
 
 p {
     text-align: justify;
-    text-justify: inter-word;
     white-space: normal;
 }
 
-.highlight {
-  background: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='1px' height='1px' viewBox='0 0 1 1' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='1' height='1' fill='yellow' /%3E%3C/svg%3E") no-repeat 100% 100%;
-  background-size: 100% 40%;
+h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5;
+    
 }
 
-div:hover .text{
-    color:#fff;
-    background-color: #fff;
+@media screen and (min-width: 40em) {
+    body {
+        width: 80%;
+    }
+    
+    h1 {
+        font-size: 1.75vw;
+    }
 }
+
 
 /* link */
 a {
@@ -92,3 +61,23 @@ a:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+
+
+/*================================================
+Start Important Part
+==================================================*/
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover {
+  background-size: 100% 88%;
+}
+
+/*================================================
+End Important Part
+==================================================*/
