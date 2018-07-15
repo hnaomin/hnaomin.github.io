@@ -1,0 +1,646 @@
+/* general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {text-decoration: none !important;}
+ul, li {list-style: none;}
+#fullpage h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 8em;
+    text-transform: uppercase;
+}
+#fullpage h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+}
+#fullpage h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em; 
+    font-weight: 600;
+    line-height: 1.4;
+}
+#fullpage i {font-style: italic;}
+
+
+/* Fullpage */
+.section, .slide {
+    position: relative; 
+    text-align: center; 
+    overflow: hidden; 
+    opacity: 1; 
+    transition: background 1s ease;
+}
+
+
+/* positions */
+.title, .text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+.labels {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+.leftSide, .rightSide {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: inherit;
+    top: 0;
+    left: 0;
+}
+.img-wrap, .inspo-wrap, .wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.img-wrap img {max-width: 75%;}
+.inspo-wrap img {max-width: 60%}
+
+
+/* texts */
+#timeless .slide2 .text-wrap p, #toiles .slide2 .wrap p {
+    max-width: 85%;
+    height: auto;
+    margin: auto;
+    line-height: 2;
+    text-align: justify;
+    white-space: normal;
+}
+#toiles .slide3 h2 {
+    margin-right: 2em;
+	padding: 1em;
+    font-weight: 600;
+}
+.about .highlight p {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.5;
+    text-align: justify;
+    white-space: normal;
+    font-size: 2em;
+}
+.title, .subtitle, #toiles .slide3 h2 {display: inline-block;}
+.subtitle {
+    padding: 1.5em;
+    width: 1000px; 
+}
+
+
+/* animations */
+/*titles*/
+#timeless .title-animated, #belladura .title-animated, #toiles .slide1 h1, #toiles .slide4 h1, #toiles .slide6 h1, #toiles .slide8 h1, #lucy .title-animated {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+#timeless.active .title-animated, #belladura.active .title-animated, #toiles.active .slide1.active h1, #toiles.active .slide4.active h1, #toiles.active .slide6.active h1, #toiles.active .slide8.active h1, #lucy.active .title-animated {
+    opacity: 0;
+	transition-delay: .6s;
+}
+/*subtitles*/
+#timeless .subtitle-animated, #belladura .subtitle-animated, #lucy .subtitle-animated {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: transform 1s, 
+        opacity 1s ease-in-out;
+}
+#timeless.active .subtitle-animated, #belladura.active .subtitle-animated, #lucy.active .subtitle-animated {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+	transition-delay: .7s;
+}
+#thesis .subtitle-animated, #suspiria .subtitle-animated, #florals .subtitle-animated, #tibet .subtitle-animated, #bacon .subtitle-animated {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: transform 1.3s, 
+        opacity 1.3s ease-in-out;
+}
+#thesis.active .subtitle-animated, #suspiria.active .subtitle-animated, #florals.active .subtitle-animated, #tibet.active .subtitle-animated, #bacon.active .subtitle-animated {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+/*labels*/
+#toiles .slide3 h2 {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: transform 1.3s, 
+        opacity 1.3s ease-in-out;
+}
+#toiles.active .slide3.active h2 {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    transition-delay: 0s; 
+}
+#toiles.active .slide3.active h2 + h2 {
+	transition-delay: .6s;
+}
+#toiles.active .slide3.active h2 + h2 + h2 {
+	transition-delay: 1.2s;
+}
+
+
+/* mouse */
+#moveLeft {
+    cursor: url(mouse-l.png), pointer;  
+    cursor: url(mouse-l.png), -moz-pointer;  
+    cursor: url(mouse-l.png), -webkit-pointer;
+}
+#moveRight {
+    cursor: url(mouse-r.png), pointer;  
+    cursor: url(mouse-r.png), -moz-pointer;  
+    cursor: url(mouse-r.png), -webkit-pointer;
+}
+
+
+
+/* bg */
+#home {
+    background: #ccc;
+}
+#thesis {
+    background: #94D0FF; 
+    background: linear-gradient(to right, #C774E8, #94D0FF); 
+    color: #000;
+}
+#timeless {
+    background: #3445ac; 
+    background: linear-gradient(to right, #3445ac, #5054a9); 
+    color: #000;
+}
+#timeless .slide:nth-child(2) {
+    background-image: url(img/2017/kornit2-inspo1.jpg), url(img/2017/kornit2-inspo3.jpg), url(img/2017/kornit2-inspo2.jpg), url(img/2017/kornit2-inspo4.jpg);
+    background-position: left 2em top 1em, left 1em bottom 1em, right 1em top 1em, right 4em bottom 1em;
+    background-size: 15%, 24%, 20%, 18%;
+    background-repeat: no-repeat;
+}
+#suspiria .slide:nth-child(1) {
+    background: #b50a37; 
+    background: linear-gradient(to right, #b50a37, #48309a); 
+    color: #000;
+}
+#suspiria .slide:nth-child(2) {
+    background: #48309a; 
+}
+#suspiria .slide:nth-child(3) {
+    background: #ea2f6c; 
+}
+#suspiria .slide:nth-child(4) {
+    background: #eb8738; 
+    background-image: url(img/2016/suspiria3-1.png), url(img/2016/suspiria3-2.png), url(img/2016/suspiria3-inspo.jpg);
+    background-position: left 2em center, center, right 2em center;
+    background-size: 30%, 30%, 30%;
+    background-repeat: no-repeat;
+}
+#belladura {
+    background: #cb7528; 
+    color: #fff; 
+}
+#belladura .slide:nth-child(1) {
+    background-image: url('img/2016/belladura1.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#belladura .slide:nth-child(2) {
+    background-image: url(img/2016/belladura2-inspo2.jpg), url(img/2016/belladura2-inspo1.jpg), url(img/2016/belladura2-inspo3.jpg), url(img/2016/belladura2.png);
+    background-position: left 34em bottom 2em, left 10em top 2em, left 6em bottom 4em, right 2em center;
+    background-size: 20%, 30%, 20%, 35%;
+    background-repeat: no-repeat;
+}
+#toiles {
+    background: #ede7db;
+    color: #000;
+}
+#toiles .slide:nth-child(1) {
+    background-image: url('img/2016/toiles1.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#toiles .slide:nth-child(3) {
+    background-image: url('img/2016/toiles3.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#toiles .slide:nth-child(4) {
+    background-image: url('img/2016/toiles4.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#toiles .slide:nth-child(6) {
+    background-image: url('img/2016/toiles6.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#toiles .slide:nth-child(8) {
+    background-image: url('img/2016/toiles8.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#lucy {
+    background: #bc010c;
+    color: #000;
+}
+#lucy .slide:nth-child(1) {
+    background-image: url('img/2016/lucy1.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#lucy .slide:nth-child(2) {
+    background-image: url(img/2016/lucy2-inspo3.jpg), url(img/2016/lucy2.png), url(img/2016/lucy2-inspo1.jpg), url(img/2016/lucy2-inspo2.jpg);
+    background-position: left 4em center, center, right 2em top 2em, right 4em bottom 2em;
+    background-size: 18%, 40%, 26%, 18%;
+    background-repeat: no-repeat;
+}
+#lucy .slide:nth-child(3) {
+    background-image: url(img/2016/lucy3-inspo1.jpg), url(img/2016/lucy3-inspo2.jpg), url(img/2016/lucy3.png), url(img/2016/lucy3-inspo3.jpg);
+    background-position: left 2em top 2em, left 2em bottom 2em, center, right 2em center;
+    background-size: 25%, 25%, 40%, 25%;
+    background-repeat: no-repeat;
+}
+#florals .slide:nth-child(1) {
+    background: #f1af58; 
+    background: linear-gradient(to right, #f1af58, #ff3437); 
+    color: #c8f42e;
+}
+#florals .slide:nth-child(2) {
+    background: #ff3437; 
+    background-image: url(img/2015/floralswim1-mood.jpg), url(img/2015/floralswim1-1.png), url(img/2015/floralswim1-2.png), url(img/2015/floralswim1-3.png), url(img/2015/floralswim1.png);
+    background-position: left 4em center, right 24em top 4em, right 4em top 6em, right 4em top 24em, center;
+    background-size: 25%, 20%, 18%, 18%, 36%;
+    background-repeat: no-repeat;
+}
+#florals .slide:nth-child(3) {
+    background: #96b5c1; 
+    background-image: url(img/2015/floralswim2-1.png), url(img/2015/floralswim2-2.png), url(img/2015/floralswim2-3.png), url(img/2015/floralswim2-mood1.jpg), url(img/2015/floralswim2.png), url(img/2015/floralswim2-mood2.jpg), url(img/2015/floralswim2-mood3.jpg);
+    background-position: left 28em top 5em, left 10em top 25em, left 28em top 25em, left 4em top 3em, right 24em center, right 4em top 2em, right 6em bottom 2em;
+    background-size: 20%, 18%, 18%, 18%, 30%, 16%, 16%;
+    background-repeat: no-repeat;
+}
+#florals .slide:nth-child(4) {
+    background: #bdb1bc; 
+    background-image: url(img/2015/floralswim3-1.png), url(img/2015/floralswim3-2.png), url(img/2015/floralswim3-3.png), url(img/2015/floralswim3.png), url(img/2015/floralswim3-mood.jpg);
+    background-position: center top 23em, center top 4em, right 20em top 5em, left 4em center, right 4em bottom 4em;
+    background-size: 20%, 18%, 18%, 38%, 18%;
+    background-repeat: no-repeat;
+}
+#florals .slide:nth-child(5) {
+    background: #fdf9f6;
+    background-image: url(img/2015/floralbedding1-1.png), url(img/2015/floralbedding1-2.png), url(img/2015/floralbedding1-3.png), url(img/2015/floralbedding1-market1.jpg), url(img/2015/floralbedding1-market2.jpg);
+    background-position: left 22em center, center, right 22em center, left top, right bottom;
+    background-size: 18%, 18%, 18%, 20%, 25%;
+    background-repeat: no-repeat;
+}
+#florals .slide:nth-child(6) {
+    background: #fdf9f6;
+    background-image: url(img/2015/floralbedding2-market1.jpg), url(img/2015/floralbedding2.png), url(img/2015/floralbedding2-market2.jpg);
+    background-position: left 4em center, center, right 4em center;
+    background-size: 22%, 30%, 20%;
+    background-repeat: no-repeat;
+}
+#tibet .slide:nth-child(1) {    
+    background: #0a9bdc; 
+    background: linear-gradient(to right, #0a9bdc, #dd2266); 
+    color: #000;
+}
+#tibet .slide:nth-child(2) {
+    background: #dd2266; 
+    background-image: url(img/2015/tibet1-inspo1.jpg), url(img/2015/tibet1-inspo2.jpg), url(img/2015/tibet1-1.png), url(img/2015/tibet1-2.png);
+    background-position: left 8em top 2em, left 3em top 23em, center, right 2em center;
+    background-size: 15%, 16%, 30%, 30%;
+    background-repeat: no-repeat;
+}
+#tibet .slide:nth-child(3) {
+    background: #223344;
+    background-image: url(img/2015/tibet2-1.png), url(img/2015/tibet2-2.png), url(img/2015/tibet2-inspo.jpg);
+    background-position: left 2em center, center, right 6em center;
+    background-size: 30%, 30%, 18%;
+    background-repeat: no-repeat;
+}
+#bacon {
+    background: #eee;
+    color: #000;
+}
+#bacon .slide:nth-child(3) {
+    background-image: url(img/2014/bacon2-1.png), url(img/2014/bacon2-inspo.jpg), url(img/2014/bacon2-2.png);
+    background-position: left 2em center, center, right 2em center;
+    background-size: 34%, 20%, 34%;
+    background-repeat: no-repeat;
+}
+#bacon .slide:nth-child(5) {
+    background-image: url('img/2014/bacon4.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+#about {
+    background: #eee;
+    color: #000;
+}
+
+
+/* slide fade */
+.fp-slidesContainer {
+	width: 100%!important;
+	transform: none!important;
+}
+.fp-slide {
+	width: 100%!important;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .7s ease-in-out;
+}
+.fp-slide.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+/* dot nav */
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
+
+
+/* main */
+button span {
+    font-family: 'Lato', sans-serif;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+button {
+    background: none; 
+    border: 0; 
+    outline: none; 
+    box-sizing: border-box; 
+    margin: 1em; 
+    padding: 1em 2em; 
+    color: #fff; 
+    font-weight: 700; 
+    position: relative; 
+    cursor: pointer;
+}
+button::before, button::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.center:hover {
+  color: #000;
+}
+.center::before, .center::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.center::before {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+}
+.center::after {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  -webkit-transform: scale3d(1, 0, 1);
+          transform: scale3d(1, 0, 1);
+}
+.center:hover::before, .center:hover::after {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+
+/* about */
+.highlight span {
+    background: linear-gradient(to right, #eee 50%, yellow 50%); 
+    background-position: 0;
+    background-size: 200%;
+    transition: all 0.4s;
+}
+.highlight span:hover {background-position: -100%;}
+.shake-trigger {
+    display: inline-block;
+}
+
+
+/* links */
+.highlight a, nav li a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+.highlight a:hover {
+    color: #000;
+}
+.highlight a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.highlight a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/* menu */
+.header {
+    position: fixed; 
+    width: 100%; 
+    height: auto; 
+    z-index: 50; 
+    transition: all 0.3s linear; 
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); 
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+    text-align: center;
+}
+nav li {
+    position: relative; 
+    vertical-align: top; 
+	display: inline-block;
+	margin-right: 1em;
+	padding: 1em;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em; 
+    transition: all 0.3s ease-in-out 0s;
+}
+nav li a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+    cursor: pointer;
+}
+nav li a:hover, .column li a:hover {
+    text-shadow: 0 0 50px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);
+    font-weight: bolder;
+    -webkit-transition: all 0.1s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
+}
+.nav-dropdown { 
+    display: none;
+    width: auto;
+    height: auto;
+    padding: .5em;
+    position: absolute;
+    z-index: 50;
+}
+
+
+/* archive */
+#fullpage {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    transition: 0.3s ease;
+}
+#fullpage.is-open {
+    -webkit-filter: blur(35px);
+    filter: blur(35px);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+.overlay-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 6em;
+    position: fixed;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+.overlay-wrap.is-open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+/*timeline*/
+.timeline {
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em; 
+}
+.column {
+    float: left;
+    width: 20%;
+    padding: 1em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em; 
+    z-index: 1500;
+}
+.column ul {
+	margin: 0;
+	padding: 0;
+}
+.column li {
+    position: relative; 
+	display: block;
+	padding: .3em;
+}
+.column li span {
+    font-weight: bolder;
+}
+.column li a {
+	display: inline-block;
+	color: #000;
+	text-decoration: none;
+    cursor: pointer;
+}
+/*preview*/
+.overlay-wrap img {
+    max-width: 65%;
+    max-height: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: -1;
+}
