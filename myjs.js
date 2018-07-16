@@ -112,7 +112,6 @@ $(function(){
 
 //playlist
 /*This code loads the IFrame Player API code asynchronously.*/
-var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -139,44 +138,26 @@ var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
       }
 
 /*shuffle*/
-var playlistArray;
-    var playListArrayLength;
-    var maxNumber;
-
-    var oldNumber = 0;
-    var NewNumber = 0;
-
-    function newRandomNumber() {
-        oldNumber = NewNumber;
-        NewNumber = Math.floor(Math.random() * maxNumber);
-        if (NewNumber == oldNumber) {
-            newRandomNumber();
-        } else {
-            return NewNumber;
-        }
-    }
-
 /*The API will call this function when the video player is ready.*/
 function onPlayerReady(event) {
-    player.cuePlaylist({
+    player.loadPlaylist({
         'listType': 'playlist',
-        'list': playlistId
-    })
+        'list': 'PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a'
+    });
 }
 
 var firstLoad = true;
 function onPlayerStateChange(event) {
-    console.log(event.data);
     if (event.data == YT.PlayerState.ENDED) {
-        player.playVideoAt(newRandomNumber());   
+        next();
     } else {
         if (firstLoad && event.data == YT.PlayerState.PLAYING) {
             firstLoad = false;
             playlistArray = player.getPlaylist();
             playListArrayLength = playlistArray.length;
             maxNumber = playListArrayLength;
-            NewNumber = newRandomNumber();
-            player.playVideoAt(newRandomNumber());
+            document.getElementById('output').innerHTML = playListArrayLength;
+            next();
         }
     }
 }
