@@ -113,6 +113,7 @@ $(function(){
 
 //playlist
 /*This code loads the IFrame Player API code asynchronously.*/
+var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -160,7 +161,7 @@ var playlistArray;
 function onPlayerReady(event) {
     player.cuePlaylist({
         'listType': 'playlist',
-        'list': 'PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a'
+        'list': 'playlistId'
     })
 }
 
