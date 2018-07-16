@@ -111,51 +111,51 @@ $(function(){
 
 
 //playlist
-var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a"; 
-var tag = document.createElement('script'); 
-tag.src = "https://www.youtube.com/iframe_api"; 
+var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
+      var tag = document.createElement('script');
 
-var firstScriptTag = document.getElementsByTagName('script')[0]; 
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player; 
-
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('music', {
-        height: '200',
-        width: '200',
-        playerVars: {
-            'autoplay': 0,
-            'controls': 1,
-            rel: 0,
-            fs: 0
-        },
-        
-        events: {
+/*This function creates an <iframe> (and YouTube player) after the API code downloads.*/
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('music', {
+          height: '200',
+          width: '200',
+            playerVars: {
+                'autoplay': 0,
+                'controls': 1,
+                rel: 0,
+                fs: 0
+            },
+          events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
-        }
-    });
-}
+          }
+        });
+      }
 
-
+/*shuffle*/
 var playlistArray;
-var playListArrayLength;
-var maxNumber;
+    var playListArrayLength;
+    var maxNumber;
 
-var oldNumber = 0;
-var NewNumber = 0;
+    var oldNumber = 0;
+    var NewNumber = 0;
 
-function newRandomNumber() {
-    oldNumber = NewNumber;
-    NewNumber = Math.floor(Math.random() * maxNumber);
-    if (NewNumber == oldNumber) {
-        newRandomNumber();
-    } else {
-        return NewNumber;
+    function newRandomNumber() {
+        oldNumber = NewNumber;
+        NewNumber = Math.floor(Math.random() * maxNumber);
+        if (NewNumber == oldNumber) {
+            newRandomNumber();
+        } else {
+            return NewNumber;
+        }
     }
-}
 
+/*The API will call this function when the video player is ready.*/
 function onPlayerReady(event) {
     player.loadPlaylist({
         'listType': 'playlist',
@@ -163,11 +163,11 @@ function onPlayerReady(event) {
     });
 }
 
-var firstLoad = true;
+var firstLoad = false;
 function onPlayerStateChange(event) {
     console.log(event.data);
     if (event.data == YT.PlayerState.ENDED) {
-        player.playVideoAt(newRandomNumber());
+        player.playVideoAt(newRandomNumber());   
     } else {
         if (firstLoad && event.data == YT.PlayerState.PLAYING) {
             firstLoad = false;
