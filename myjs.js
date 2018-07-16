@@ -157,7 +157,7 @@ var playlistArray;
 
 /*The API will call this function when the video player is ready.*/
 function onPlayerReady(event) {
-    player.loadPlaylist({
+    player.cuePlaylist({
         'listType': 'playlist',
         'list': playlistId
     });
