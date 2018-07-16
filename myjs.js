@@ -161,7 +161,7 @@ var playlistArray;
 function onPlayerReady(event) {
     player.cuePlaylist({
         'listType': 'playlist',
-        'list': 'playlistId'
+        'list': playlistId
     })
 }
 
