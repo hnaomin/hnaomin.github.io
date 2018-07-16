@@ -111,7 +111,7 @@ $(function(){
 
 
 //playlist
-var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
+/*This code loads the IFrame Player API code asynchronously.*/
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -125,8 +125,8 @@ var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
           height: '200',
           width: '200',
             playerVars: {
-                'autoplay': 0,
-                'controls': 1,
+                autoplay: 0,
+                controls: 1,
                 rel: 0,
                 fs: 0
             },
@@ -136,6 +136,7 @@ var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
           }
         });
       }
+var playlistId = "";
 
 /*shuffle*/
 var playlistArray;
@@ -159,11 +160,13 @@ var playlistArray;
 function onPlayerReady(event) {
     player.cuePlaylist({
         'listType': 'playlist',
-        'list': playlistId
-    });
+        'list': 'PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a'
+    })
 }
 
-var firstLoad = false;
+
+
+var firstLoad = true;
 function onPlayerStateChange(event) {
     console.log(event.data);
     if (event.data == YT.PlayerState.ENDED) {
