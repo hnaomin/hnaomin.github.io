@@ -137,7 +137,6 @@ var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
           }
         });
       }
-var playlistId = "";
 
 /*shuffle*/
 var playlistArray;
