@@ -182,6 +182,12 @@ ul, li {list-style-type: none;}
     background: linear-gradient(to right, #3445ac, #5054a9); 
     color: #000;
 }
+#timeless .slide:nth-child(1) {
+    background-image: url('img/2017/kornit1.png');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
 #timeless .slide:nth-child(2) {
     background-image: url(img/2017/kornit2-inspo1.jpg), url(img/2017/kornit2-inspo3.jpg), url(img/2017/kornit2-inspo2.jpg), url(img/2017/kornit2-inspo4.jpg);
     background-position: left 2em top 1em, left 1em bottom 1em, right 1em top 1em, right 4em bottom 1em;
@@ -286,21 +292,21 @@ ul, li {list-style-type: none;}
 #florals .slide:nth-child(2) {
     background: #ff3437; 
     background-image: url(img/2015/floralswim1-mood.jpg), url(img/2015/floralswim1-1.png), url(img/2015/floralswim1-2.png), url(img/2015/floralswim1-3.png), url(img/2015/floralswim1.png);
-    background-position: left 4em center, right 24em top 4em, right 4em top 6em, right 4em top 24em, center;
+    background-position: left 4em center, right 26em top 4em, right 4em top 6em, right 4em bottom 6em, center;
     background-size: 25%, 20%, 18%, 18%, 36%;
     background-repeat: no-repeat;
 }
 #florals .slide:nth-child(3) {
     background: #96b5c1; 
-    background-image: url(img/2015/floralswim2-1.png), url(img/2015/floralswim2-2.png), url(img/2015/floralswim2-3.png), url(img/2015/floralswim2-mood1.jpg), url(img/2015/floralswim2.png), url(img/2015/floralswim2-mood2.jpg), url(img/2015/floralswim2-mood3.jpg);
-    background-position: left 28em top 5em, left 10em top 25em, left 28em top 25em, left 4em top 3em, right 24em center, right 4em top 2em, right 6em bottom 2em;
-    background-size: 20%, 18%, 18%, 18%, 30%, 16%, 16%;
+    background-image: url(img/2015/floralswim2-1.png), url(img/2015/floralswim2-2.png), url(img/2015/floralswim2-3.png), url(img/2015/floralswim2-mood1.jpg), url(img/2015/floralswim2-mood2.jpg), url(img/2015/floralswim2-mood3.jpg), url(img/2015/floralswim2.png);
+    background-position: left 30em top 5em, left 10em bottom 4em, left 28em bottom 4em, left 4em top 3em, right 4em top 2em, right 6em bottom 2em, right 24em center;
+    background-size: 20%, 18%, 18%, 18%, 16%, 16%, 30%;
     background-repeat: no-repeat;
 }
 #florals .slide:nth-child(4) {
     background: #bdb1bc; 
     background-image: url(img/2015/floralswim3-1.png), url(img/2015/floralswim3-2.png), url(img/2015/floralswim3-3.png), url(img/2015/floralswim3.png), url(img/2015/floralswim3-mood.jpg);
-    background-position: center top 23em, center top 4em, right 20em top 5em, left 4em center, right 4em bottom 4em;
+    background-position: center bottom 5em, center top 5em, right 20em top 5em, left 4em center, right 4em bottom 4em;
     background-size: 20%, 18%, 18%, 38%, 18%;
     background-repeat: no-repeat;
 }
@@ -326,7 +332,7 @@ ul, li {list-style-type: none;}
 #tibet .slide:nth-child(2) {
     background: #dd2266; 
     background-image: url(img/2015/tibet1-inspo1.jpg), url(img/2015/tibet1-inspo2.jpg), url(img/2015/tibet1-1.png), url(img/2015/tibet1-2.png);
-    background-position: left 8em top 2em, left 3em top 23em, center, right 2em center;
+    background-position: left 10em top 2em, left 4em bottom 2em, center, right 2em center;
     background-size: 15%, 16%, 30%, 30%;
     background-repeat: no-repeat;
 }
