@@ -178,8 +178,8 @@ ul, li {list-style-type: none;}
     color: #000;
 }
 #timeless {
-    background: #3445ac; 
-    background: linear-gradient(to right, #3445ac, #5054a9); 
+    background: #383a96; 
+    background: linear-gradient(to right, #383a96, #5c3a97); 
     color: #000;
 }
 #timeless .slide:nth-child(1) {
