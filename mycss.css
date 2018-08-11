@@ -27,7 +27,7 @@ ul, li {list-style-type: none;}
     font-weight: 600;
     line-height: 1.4;
 }
-#fullpage i {font-style: italic;}
+#fullpage i, #mobile i {font-style: italic;}
 /* media queries */
 @media only screen and (max-width: 1024px) {
     .header, .overlay, .overlay-wrap, #music, #fullpage {display: none;}
