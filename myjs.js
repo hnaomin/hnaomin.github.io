@@ -206,7 +206,7 @@ var tag = document.createElement('script');
                 autoplay: 0,
                 controls: 1,
                 rel: 0,
-                fs: 0
+                fs: 0,
             },
             events: {
             'onReady': onPlayerReady,
