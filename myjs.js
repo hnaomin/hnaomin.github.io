@@ -190,17 +190,18 @@ $(function(){$(".totopIcon").click(function(){$("html,body").animate({scrollTop:
 
 /* music */
 var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
-      var tag = document.createElement('script');
+var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('music', {
-          height: '200',
-          width: '200',
+var player;
+
+function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '200',
+            width: '200',
             playerVars: {
                 autoplay: 0,
                 controls: 1,
@@ -210,15 +211,14 @@ var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
                 loop: 1,
                 modestbranding: 0
             },
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
         });
-      }
+    }
 
-/*shuffle*/
-var playlistArray;
+    var playlistArray;
     var playListArrayLength;
     var maxNumber;
 
@@ -239,7 +239,7 @@ function onPlayerReady(event) {
     player.cuePlaylist({
         'listType': 'playlist',
         'list': playlistId
-    })
+    });
 }
 
 var firstLoad = true;
