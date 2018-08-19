@@ -1,34 +1,35 @@
-jQuery(document).ready(function(){
-    var fullPageCreated = false; 
+/*jslint browser: true*/
+/*global $, jQuery*/
+jQuery(document).ready(function () {
+    var fullPageCreated = false;
     
-    if (jQuery(window).width() > 1024){
+    if (jQuery(window).width() > 1024) {
         createfullPage();
     }
     
-    function createfullPage(){
-        if(fullPageCreated === false){
-            fullPageCreated = true; 
+    function createfullPage() {
+        if (fullPageCreated === false) {
+            fullPageCreated = true;
             
             jQuery('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage', 'lastPage'], 
-                lockAnchors: true, 
-                navigation: false, 
-                lazyLoading: true, 
-                scrollBar: true, 
-                keyboardScrolling: true, 
-                scrollingSpeed: 500, 
-                slidesNavigation: true, 
-                slidesNavPosition: 'bottom', 
-                controlArrows: false, 
-                menu: '#menu', 
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage', 'lastPage'],
+                lockAnchors: true,
+                navigation: false,
+                lazyLoading: true,
+                scrollBar: true,
+                keyboardScrolling: true,
+                scrollingSpeed: 500,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+                controlArrows: false,
+                menu: '#menu',
                 
-                onLeave: function(origin, destination, direction){
-                    var leavingSection = this; 
+                onLeave: function (origin, destination, direction) {
+                    var leavingSection = this;
                     
-                    if(direction =='down'){
+                    if (direction == 'down') {
                         $('.header').slideUp('fast');
-                    }
-                    else if(direction == 'up'){
+                    } else if (direction == 'up') {
                         $('.header').slideDown('fast');
                     }
                 }
@@ -36,87 +37,86 @@ jQuery(document).ready(function(){
         }
     }
     
-    jQuery(window).resize(function() {
+    jQuery(window).resize(function () {
         if (jQuery(window).width() > 1024) {
             createfullPage();
-        } 
-        else {
-            if(fullPageCreated === true) {
-                fullPageCreated = false; 
+        } else {
+            if (fullPageCreated === true) {
+                fullPageCreated = false;
                 jQuery.fn.fullpage.destroy('all');
             }
         }
     });
 });
 
-$(document).on('click', '#moveDown', function(){
-    $.fn.fullpage.moveSectionDown();
-});
-$(document).on('click', '#moveRight', function(){
-  $.fn.fullpage.moveSlideRight();
-});
-$(document).on('click', '#moveLeft', function(){
-  $.fn.fullpage.moveSlideLeft();
-});
-
+$(function () {
+    'use strict';
+    $(document).on('click', '#moveDown', function () {
+        $.fn.fullpage.moveSectionDown();
+    });
+    $(document).on('click', '#moveRight', function () {
+        $.fn.fullpage.moveSlideRight();
+    });
+    $(document).on('click', '#moveLeft', function () {
+        $.fn.fullpage.moveSlideLeft();
+    });
 /* drop down */
-$(function() {
-    $('.toggle').click(function(){
+    $('.toggle').click(function () {
         $(this).next('.nav-dropdown').slideToggle('fast');
     });
     
-    $(document).click(function(e) {
+    $(document).click(function (e) {
         var target = e.target;
         if (!$(target).is('.toggle') && !$(target).parents().is('.toggle')) {
             $('.nav-dropdown').slideUp('fast');
         }
     });
 /* overlay */
-    $('.overlay-trigger').click(function() {
+    $('.overlay-trigger').click(function () {
 		$('#fullpage, .overlay-wrap, .overlay').addClass('is-open');
 	});
-	$('.overlay-wrap').click(function() {
+	$('.overlay-wrap').click(function () {
 		$('#fullpage, .overlay-wrap, .overlay').removeClass('is-open');
 	});
 /* preview */
-    $('#preview-timeless').hover(function(){
+    $('#preview-timeless').hover(function () {
         $('#preview-timeless-show').show();
-    },function(){
+    }, function () {
         $('#preview-timeless-show').hide();
     });
-    $('#preview-lucy').hover(function(){
+    $('#preview-lucy').hover(function () {
         $('#preview-lucy-show').show();
-    },function(){
+    }, function () {
         $('#preview-lucy-show').hide();
     });
-    $('#preview-toiles').hover(function(){
+    $('#preview-toiles').hover(function () {
         $('#preview-toiles-show').show();
-    },function(){
+    }, function () {
         $('#preview-toiles-show').hide();
     });
-    $('#preview-belladura').hover(function(){
+    $('#preview-belladura').hover(function () {
         $('#preview-belladura-show').show();
-    },function(){
+    }, function () {
         $('#preview-belladura-show').hide();
     });
-    $('#preview-suspiria').hover(function(){
+    $('#preview-suspiria').hover(function () {
         $('#preview-suspiria-show').show();
-    },function(){
+    }, function () {
         $('#preview-suspiria-show').hide();
     });
-    $('#preview-tibet').hover(function(){
+    $('#preview-tibet').hover(function () {
         $('#preview-tibet-show').show();
-    },function(){
+    }, function () {
         $('#preview-tibet-show').hide();
     });
-    $('#preview-florals').hover(function(){
+    $('#preview-florals').hover(function () {
         $('#preview-florals-show').show();
-    },function(){
+    }, function () {
         $('#preview-florals-show').hide();
     });
-    $('#preview-bacon').hover(function(){
+    $('#preview-bacon').hover(function () {
         $('#preview-bacon-show').show();
-    },function(){
+    }, function () {
         $('#preview-bacon-show').hide();
     });
 });
@@ -126,9 +126,9 @@ function is_touch_device() {
     return 'ontouchstart' in window || navigator.maxTouchPoints;
 }
 
-var navs = document.querySelectorAll('.scroll'); 
+var navs = document.querySelectorAll('.scroll');
 if (!is_touch_device()) {
-    for ( var i = 0, length = navs.length; i < length; i++ ) {
+    for (var i = 0, length = navs.length; i < length; i++ ) {
         var nav = navs[i]; 
         new Flickity( nav, {
             cellAlign: 'left', 
@@ -150,7 +150,6 @@ $('#mobile .tablink a').click(function() {
     var tabToOpen = ".tabContent[data-tab='" + tabNumber + "']"; 
     $(tabToOpen).fadeIn(800).addClass('active');
 });
-
 /*tab content bg*/
 $(window).scroll(function() {
     var $window = $(window), 

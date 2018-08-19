@@ -1,26 +1,26 @@
 var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player; 
+var player;
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
-        height: '200', 
+        height: '200',
         width: '200',
         playerVars: {
-            'autoplay': 0, 
-            'controls': 1, 
-            'fs': 0, 
-            'rel': 0, 
-            'iv_load_policy': 3, 
-            'cc_load_policy': 0, 
-            color: 'white', 
-            'disablekb': 1, 
+            'autoplay': 0,
+            'controls': 1,
+            'fs': 0,
+            'rel': 0,
+            'iv_load_policy': 3,
+            'cc_load_policy': 0,
+            color: 'white',
+            'disablekb': 1,
             'loop': 1
-        }, 
+        },
         events: {
-            'onReady': onPlayerReady, 
+            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
@@ -33,8 +33,8 @@ var oldNumber = 0;
 var NewNumber = 0;
 
 function newRandomNumber() {
-    oldNumber = NewNumber; 
-    NewNumber = Math.floor(Math.random() * maxNumber); 
+    oldNumber = NewNumber;
+    NewNumber = Math.floor(Math.random() * maxNumber);
     if (NewNumber == oldNumber) {
         newRandomNumber();
     } else {
@@ -44,14 +44,14 @@ function newRandomNumber() {
 
 function onPlayerReady(event) {
     player.cuePlaylist({
-        'listType': 'playlist', 
+        'listType': 'playlist',
         'list': 'PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a'
     });
 }
 
 var firstLoad = true;
 function onPlayerStateChange(event) {
-    console.log(event.data); 
+    console.log(event.data);
     if (event.data == YT.PlayerState.ENDED) {
         player.playVideoAt(newRandomNumber());
     } else {
