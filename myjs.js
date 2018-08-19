@@ -71,20 +71,14 @@ $(function() {
             $('.nav-dropdown').slideUp('fast');
         }
     });
-});
-
 /* overlay */
-$(function() {
     $('.overlay-trigger').click(function() {
 		$('#fullpage, .overlay-wrap, .overlay').addClass('is-open');
 	});
 	$('.overlay-wrap').click(function() {
 		$('#fullpage, .overlay-wrap, .overlay').removeClass('is-open');
 	});
-});
-
 /* preview */
-$(function(){
     $('#preview-timeless').hover(function(){
         $('#preview-timeless-show').show();
     },function(){
@@ -127,7 +121,6 @@ $(function(){
     });
 });
 
-
 /* mobile */
 function is_touch_device() {
     return 'ontouchstart' in window || navigator.maxTouchPoints;
@@ -157,6 +150,7 @@ $('#mobile .tablink a').click(function() {
     var tabToOpen = ".tabContent[data-tab='" + tabNumber + "']"; 
     $(tabToOpen).fadeIn(800).addClass('active');
 });
+
 /*tab content bg*/
 $(window).scroll(function() {
     var $window = $(window), 
@@ -164,7 +158,13 @@ $(window).scroll(function() {
         $panel = $('.panel'); 
     
     var scroll = $window.scrollTop() + ($window.height() / 2); 
-    
+/*back to top*/
+    if ($(this).scrollTop() > 100 ) {
+        $('.totop:hidden').stop(true, true).fadeIn();
+    } else {
+        $('.totop').stop(true, true).fadeOut();
+    }
+/*tab content bg*/
     $panel.each(function () {
         var $this = $(this); 
         
@@ -178,11 +178,4 @@ $(window).scroll(function() {
 }).scroll();
 
 /*back to top*/
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 100 ) {
-        $('.totop:hidden').stop(true, true).fadeIn();
-    } else {
-        $('.totop').stop(true, true).fadeOut();
-    }
-});
 $(function(){$(".totopIcon").click(function(){$("html,body").animate({scrollTop:$(".mobileHeader").offset().top},"1000");return false})});
