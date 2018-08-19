@@ -4,8 +4,7 @@ var tag = document.createElement('script');
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player; 
-window.onYouTubeIframeAPIReady = function() {
-    console.log("YouTube API Ready");
+function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
         height: '200', 
         width: '200',
