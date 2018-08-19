@@ -189,17 +189,15 @@ $(function(){$(".totopIcon").click(function(){$("html,body").animate({scrollTop:
 
 
 /* music */
-var playlistId = "PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a";
 var tag = document.createElement('script');
-		tag.src = "https://www.youtube.com/iframe_api";
 
-var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
-
+var player; 
 function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
+    player = new YT.Player('player', {
             height: '200',
             width: '200',
             playerVars: {
@@ -208,53 +206,21 @@ function onYouTubeIframeAPIReady() {
                 rel: 0,
                 fs: 0,
                 iv_load_policy: 3,
-                loop: 1,
                 modestbranding: 0
             },
             events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
+                'onReady': onPlayerReady
             }
         });
     }
 
-    var playlistArray;
-    var playListArrayLength;
-    var maxNumber;
-
-    var oldNumber = 0;
-    var NewNumber = 0;
-
-    function newRandomNumber() {
-        oldNumber = NewNumber;
-        NewNumber = Math.floor(Math.random() * maxNumber);
-        if (NewNumber == oldNumber) {
-            newRandomNumber();
-        } else {
-            return NewNumber;
-        }
-    }
-
 function onPlayerReady(event) {
-    player.cuePlaylist({
-        'listType': 'playlist',
-        'list': playlistId
-    });
-}
-
-var firstLoad = true;
-function onPlayerStateChange(event) {
-    console.log(event.data);
-    if (event.data == YT.PlayerState.ENDED) {
-        player.playVideoAt(newRandomNumber());   
-    } else {
-        if (firstLoad && event.data == YT.PlayerState.PLAYING) {
-            firstLoad = false;
-            playlistArray = player.getPlaylist();
-            playListArrayLength = playlistArray.length;
-            maxNumber = playListArrayLength;
-            NewNumber = newRandomNumber();
-            player.playVideoAt(newRandomNumber());
-        }
-    }
+    event.target.cuePlaylist({'listType': 'playlist', 
+                               'list': 'PLFU2CdHB2e4dwetcYyTzCMZeHLk1SXR7a',
+                               'index': '0'
+                              });
+    event.target.setLoop(true); 
+    setTimeout( function() {
+        event.target.setShuffle(true);
+    }, 2000);
 }
