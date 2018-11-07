@@ -77,7 +77,7 @@ ul, li {list-style-type: none;}
     transform: translate(-50%, -50%);
 }
 .img-wrap img {max-width: 75%;}
-.inspo-wrap img {max-width: 60%}
+.inspo-wrap img {max-width: 75%}
 
 /* texts */
 .vhs {text-shadow: 2px 0 1px rgba(251, 0, 231, 0.8), 0 2px 1px rgba(0, 233, 235, 0.8), -2px 0 1px rgba(0, 242, 14, 0.8), 0 -2px 1px rgba(244, 45, 0, 0.8), 2px 0 1px rgba(59, 0, 226, 0.8);}
