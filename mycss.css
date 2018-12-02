@@ -524,7 +524,7 @@ button span {
 }
 button {
     background: none; 
-    border: 0; 
+    border: 2px solid; 
     outline: none; 
     box-sizing: border-box; 
     margin: 1em; 
