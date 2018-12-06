@@ -15,7 +15,6 @@ jQuery(document).ready(function () {
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage', 'lastPage'],
                 lockAnchors: true,
                 navigation: false,
-                lazyLoading: true,
                 scrollBar: true,
                 keyboardScrolling: true,
                 scrollingSpeed: 500,
