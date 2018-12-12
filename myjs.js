@@ -31,6 +31,9 @@ jQuery(document).ready(function () {
                     } else if (direction == 'up') {
                         $('.header').slideDown('fast');
                     }
+                    if (direction == 'down') {
+                        $('.footer').fadeIn('slow');
+                    }
                 }
             });
         }

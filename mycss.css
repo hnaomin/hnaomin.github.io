@@ -50,7 +50,7 @@ ul, li {list-style-type: none;}
 }
 
 /* positions */
-.title, .text-wrap {
+.title, .text-wrap, .grid-ditsyBed {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,6 +78,53 @@ ul, li {list-style-type: none;}
 }
 .img-wrap img {max-width: 75%;}
 .inspo-wrap img {max-width: 75%}
+
+/* grids */
+.grid-belladura, .grid-ditsy, .grid-ditsy2, .grid-ditsy3, .grid-tibet {
+    display: grid;
+    grid-gap: 2em;
+    position: absolute;
+}
+.grid-belladura, .grid-ditsy, .grid-ditsy2, .grid-ditsy3 {width: inherit;}
+.grid-belladura, .grid-ditsy2, .grid-tibet {height: inherit;}
+.grid-belladura {
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 220px));
+    margin-left: 8vw;
+}
+.grid-belladura .box:last-child {grid-column: span 2;}
+.grid-ditsy, .grid-ditsy2, .grid-ditsy3 {
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    padding: 2em;
+}
+.grid-ditsy .box:first-child {grid-row: span 2;}
+.grid-ditsy2 {bottom: 0;}
+.grid-ditsy2 .box:first-child {
+    grid-row: 1 / 2;
+    grid-column: 2;
+}
+.grid-ditsy2 .box:nth-child(2) {
+    grid-row: 2 / 2;
+    grid-column: 1 / 2;
+}
+.grid-ditsy2 .box:last-child {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+}
+.grid-ditsy3 .box:first-child {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+}
+.grid-ditsyBed {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, max-content));
+    grid-gap: .4em;
+    max-width: 1000px;
+}
+.grid-tibet {
+    grid-auto-rows: minmax(20%, 80vmax);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 
 /* texts */
 .vhs {text-shadow: 2px 0 1px rgba(251, 0, 231, 0.8), 0 2px 1px rgba(0, 233, 235, 0.8), -2px 0 1px rgba(0, 242, 14, 0.8), 0 -2px 1px rgba(244, 45, 0, 0.8), 2px 0 1px rgba(59, 0, 226, 0.8);}
@@ -334,9 +381,9 @@ ul, li {list-style-type: none;}
     background-repeat: no-repeat; 
 }
 #belladura .slide:nth-child(2) {
-    background-image: url(img/2016/belladura2-inspo2.jpg), url(img/2016/belladura2-inspo1.jpg), url(img/2016/belladura2-inspo3.jpg), url(img/2016/belladura2.png);
-    background-position: left 34em bottom 2em, left 10em top 2em, left 6em bottom 4em, right 2em center;
-    background-size: 20%, 30%, 20%, 35%;
+    background-image: url(img/2016/belladura2.png);
+    background-position: right 4em center;
+    background-size: 35%;
     background-repeat: no-repeat;
 }
 #toiles {
@@ -402,30 +449,30 @@ ul, li {list-style-type: none;}
 }
 #florals .slide:nth-child(2) {
     background: #ff3437; 
-    background-image: url(img/2015/floralswim1-mood.jpg), url(img/2015/floralswim1-1.png), url(img/2015/floralswim1-2.png), url(img/2015/floralswim1-3.png), url(img/2015/floralswim1.png);
-    background-position: left 4em center, right 28em top 4em, right 4em top 6em, right 6em bottom 6em, center;
-    background-size: 25%, 20%, 18%, 18%, 36%;
+    background-image: url(img/2015/floralswim1-mood.jpg), url(img/2015/floralswim1.png);
+    background-position: left 2em center, center;
+    background-size: 25%, 36%;
     background-repeat: no-repeat;
 }
 #florals .slide:nth-child(3) {
     background: #96b5c1; 
-    background-image: url(img/2015/floralswim2-1.png), url(img/2015/floralswim2-2.png), url(img/2015/floralswim2-3.png), url(img/2015/floralswim2-mood1.jpg), url(img/2015/floralswim2-mood2.jpg), url(img/2015/floralswim2-mood3.jpg), url(img/2015/floralswim2.png);
-    background-position: left 30em top 5em, left 6em bottom 4em, left 28em bottom 4em, left 4em top 3em, right 4em top 2em, right 6em bottom 2em, right 24em center;
-    background-size: 20%, 18%, 18%, 18%, 16%, 16%, 30%;
+    background-image: url(img/2015/floralswim2-mood1.jpg), url(img/2015/floralswim2-mood2.jpg), url(img/2015/floralswim2-mood3.jpg), url(img/2015/floralswim2.png);
+    background-position: left top, right 4em top 2em, right 6em bottom 2em, right 24em center;
+    background-size: 20%, 18%, 20%, 30%;
     background-repeat: no-repeat;
 }
 #florals .slide:nth-child(4) {
     background: #bdb1bc; 
-    background-image: url(img/2015/floralswim3-1.png), url(img/2015/floralswim3-2.png), url(img/2015/floralswim3-3.png), url(img/2015/floralswim3.png), url(img/2015/floralswim3-mood.jpg);
-    background-position: center bottom 5em, center top 5em, right 20em top 5em, left 4em center, right 4em bottom 4em;
-    background-size: 20%, 18%, 18%, 38%, 18%;
+    background-image: url(img/2015/floralswim3.png), url(img/2015/floralswim3-mood.jpg);
+    background-position: left 4em center, right 3em bottom 2em;
+    background-size: 38%, 18%;
     background-repeat: no-repeat;
 }
 #florals .slide:nth-child(5) {
     background: #fdf9f6;
-    background-image: url(img/2015/floralbedding1-1.png), url(img/2015/floralbedding1-2.png), url(img/2015/floralbedding1-3.png), url(img/2015/floralbedding1-market1.jpg), url(img/2015/floralbedding1-market2.jpg);
-    background-position: left 22em center, center, right 22em center, left top, right bottom;
-    background-size: 18%, 18%, 18%, 20%, 25%;
+    background-image: url(img/2015/floralbedding1-market1.jpg), url(img/2015/floralbedding1-market2.jpg);
+    background-position: left top, right bottom;
+    background-size: 20%, 25%;
     background-repeat: no-repeat;
 }
 #florals .slide:nth-child(6) {
@@ -442,9 +489,9 @@ ul, li {list-style-type: none;}
 }
 #tibet .slide:nth-child(2) {
     background: #dd2266; 
-    background-image: url(img/2015/tibet1-inspo1.jpg), url(img/2015/tibet1-inspo2.jpg), url(img/2015/tibet1-1.png), url(img/2015/tibet1-2.png);
-    background-position: left 10em top 2em, left 4em bottom 2em, center, right 2em center;
-    background-size: 15%, 16%, 30%, 30%;
+    background-image: url(img/2015/tibet1-1.png), url(img/2015/tibet1-2.png);
+    background-position: center, right 2em center;
+    background-size: 30%, 30%;
     background-repeat: no-repeat;
 }
 #tibet .slide:nth-child(3) {
@@ -485,10 +532,14 @@ ul, li {list-style-type: none;}
 	position: absolute;
 	left: 0;
 	top: 0;
+	visibility: hidden;
 	opacity: 0;
 	transition: all .7s ease-in-out;
 }
-.fp-slide.active {opacity: 1;}
+.fp-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 /* dot nav */
 #fp-nav ul li a span, 
@@ -568,7 +619,7 @@ button::before, button::after {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-/* about */
+/* about*/
 .highlight span {
     background: linear-gradient(to right, #eee 50%, yellow 50%); 
     background-position: 0;
@@ -605,7 +656,6 @@ button::before, button::after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
 /* menu */
 .header {
     position: fixed; 
@@ -654,6 +704,22 @@ button::before, button::after {
     position: absolute;
     z-index: 50;
 }
+.footer {
+    display: none;
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    height: auto; 
+    z-index: 50; 
+    transition: all 0.3s linear; 
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); 
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    padding: .4em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
 
 /* overview */
 #fullpage {
@@ -674,12 +740,12 @@ button::before, button::after {
     background: rgba(255, 255, 255, 0.75);
     z-index: 1000;
     opacity: 0;
-    visibility: hidden;
+    display: none;
     transition: 0.2s ease;
 }
 .overlay.is-open {
     opacity: 1;
-    visibility: visible;
+    display: block;
 }
 .overlay-wrap {
     width: 100%;
@@ -764,7 +830,7 @@ button::before, button::after {
     font-weight: bold;
     color: #fff;
 }
-.logo, .mobileMenu {font-size: 1em;}
+.logo, .mobileMenu, .footer {font-size: 1em;}
 .logo, .mobileMenu, .vertical-align-middle {
     display: inline-block;
     vertical-align: middle;
@@ -933,7 +999,7 @@ button::before, button::after {
     margin-bottom: 2em;
 }
 .mobile-grid-two-cols, .mobile-grid-two-cols2, .mobile-grid-ditsy2 {grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
-.mobile-grid-two-cols img, .mobile-grid-two-cols2 img, .mobile-grid-tibet img, .mobile-grid-tibet2 img, .mobile-grid-bacon img {
+.mobile-grid-two-cols img, .mobile-grid-two-cols2 img, .mobile-grid-tibet img, .mobile-grid-tibet2 img, .mobile-grid-bacon img, .grid-belladura .box img, .grid-ditsy .box img, .grid-ditsy2 .box img, .grid-ditsy3 .box img, .grid-ditsyBed .box img, .grid-tibet .box img {
     width: 100%;
     height: 100%;
     object-fit: contain;
