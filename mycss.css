@@ -7,10 +7,8 @@
     padding: 0;
     text-decoration: none !important;
 }
-html, body {
-    width: 100%;
-    height: 100%;
-}
+html, body, #fullpage, .section, .slide, .fp-tableCell {height: 100%}
+html, body {width: 100%;}
 ul, li {list-style-type: none;}
 #fullpage h1 {
     font-family: 'Lato', sans-serif;
