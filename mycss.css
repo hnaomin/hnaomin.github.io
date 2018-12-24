@@ -28,7 +28,8 @@ ul, li {list-style-type: none;}
 #fullpage i, #mobile i {font-style: italic;}
 /* media queries */
 @media only screen and (max-width: 1024px) {
-    .header, .overlay, .overlay-wrap, #music, #fullpage {display: none;}
+    .header, .overlay-wrap, #music, #fullpage {display: none;}
+    .overlay {visibility: hidden;}
 }
 @media only screen and (min-width: 1025px) {
     #mobile {display: none;}
@@ -127,7 +128,7 @@ ul, li {list-style-type: none;}
 /* texts */
 .vapor {text-shadow: 2px 0 1px rgba(251, 0, 231, 0.8), 0 2px 1px rgba(0, 233, 235, 0.8), -2px 0 1px rgba(0, 242, 14, 0.8), 0 -2px 1px rgba(244, 45, 0, 0.8), 2px 0 1px rgba(59, 0, 226, 0.8);}
 #timeless .slide1 .subtitle-animated {text-shadow: 0 0 50px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);}
-#thesis .slide2 .wrap p, #timeless .slide2 .text-wrap p, #toiles .slide2 .wrap p {
+#timeless .slide2 .text-wrap p, #toiles .slide2 .wrap p {
     max-width: 85%;
     height: auto;
     margin: auto;
@@ -158,11 +159,11 @@ ul, li {list-style-type: none;}
 
 /* animations */
 /*titles*/
-#thesis .slide1 h1, #thesis .slide3 h1, #thesis .slide5 h1, #thesis .slide7 h1, #thesis .slide9 h1, #timeless .title-animated, #belladura .title-animated, #toiles .slide1 h1, #toiles .slide4 h1, #toiles .slide6 h1, #toiles .slide8 h1, #lucy .title-animated {
+#thesis .slide2 h1, #thesis .slide3 h1, #thesis .slide4 h1, #thesis .slide5 h1, #timeless .title-animated, #belladura .title-animated, #toiles .slide1 h1, #toiles .slide4 h1, #toiles .slide6 h1, #toiles .slide8 h1, #lucy .title-animated {
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
-#thesis.active .slide1.active h1, #thesis.active .slide3.active h1, #thesis.active .slide5.active h1, #thesis.active .slide7.active h1, #thesis.active .slide9.active h1, #timeless.active .title-animated, #belladura.active .title-animated, #toiles.active .slide1.active h1, #toiles.active .slide4.active h1, #toiles.active .slide6.active h1, #toiles.active .slide8.active h1, #lucy.active .title-animated {
+#thesis.active .slide2.active h1, #thesis.active .slide3.active h1, #thesis.active .slide4.active h1, #thesis.active .slide5.active h1, #timeless.active .title-animated, #belladura.active .title-animated, #toiles.active .slide1.active h1, #toiles.active .slide4.active h1, #toiles.active .slide6.active h1, #toiles.active .slide8.active h1, #lucy.active .title-animated {
     opacity: 0;
 	transition-delay: .6s;
 }
@@ -260,49 +261,37 @@ ul, li {list-style-type: none;}
     background: linear-gradient(to right, #c16d70, #578d91); 
     color: #000;
 }
-#thesis .slide:nth-child(3) {
-    background: #578d91; 
+#thesis .slide:nth-child(2) {
+    background: #578d91;
+    color: #000;
     background-image: url(img/2017/thesis1-inspo1.jpg), url(img/2017/thesis1-inspo4.jpg), url(img/2017/thesis1-inspo2.jpg), url(img/2017/thesis1-inspo3.jpg);
     background-position: left 1em top 1em, left 1em bottom 1em, right 1em top 1em, right 1em bottom 1em;
     background-size: 20%, 16%, 16%, 20%;
     background-repeat: no-repeat;
 }
-#thesis .slide:nth-child(4) {
-    background: #578d91; 
+#thesis .slide:nth-child(3) {
+    background: #eed099;
     color: #000;
-}
-#thesis .slide:nth-child(5) {
-    background: #eed099; 
     background-image: url(img/2017/thesis2-inspo1.jpg), url(img/2017/thesis2-inspo2.jpg), url(img/2017/thesis2-inspo3.jpg);
     background-position: right 1em center, left 1em top 1em, left 1em bottom 1em;
     background-size: 18%, 20%, 20%;
     background-repeat: no-repeat;
 }
-#thesis .slide:nth-child(6) {
-    background: #eed099; 
+#thesis .slide:nth-child(4) {
+    background: #bea935;
     color: #000;
-}
-#thesis .slide:nth-child(7) {
-    background: #bea935; 
     background-image: url(img/2017/thesis3-inspo1.jpg), url(img/2017/thesis3-inspo2.jpg), url(img/2017/thesis3-inspo3.jpg), url(img/2017/thesis3-inspo4.jpg);
     background-position: left 1em center, right 1em top 1em, right 1em center, right 1em bottom 1em;
     background-size: 18%, 20%, 18%, 20%;
     background-repeat: no-repeat;
 }
-#thesis .slide:nth-child(8) {
-    background: #bea935; 
-    color: #000;
-}
-#thesis .slide:nth-child(9) {
-    background: #223344; 
+#thesis .slide:nth-child(5) {
+    background: #223344;
+    color: #fff;
     background-image: url(img/2017/thesis4-inspo1.jpg), url(img/2017/thesis4-inspo2.jpg), url(img/2017/thesis4-inspo3.jpg);
     background-position: right 1em center, left 1em top 1em, left 1em bottom 1em;
     background-size: 20%, 15%, 15%;
     background-repeat: no-repeat;
-}
-#thesis .slide:nth-child(10) {
-    background: #223344; 
-    color: #fff;
 }
 #aesthetic, .mobile-aesthetic {
     color: #000;
@@ -346,7 +335,7 @@ ul, li {list-style-type: none;}
 }
 #timeless .slide:nth-child(2) {
     background-image: url(img/2017/kornit2-inspo1.jpg), url(img/2017/kornit2-inspo3.jpg), url(img/2017/kornit2-inspo2.jpg), url(img/2017/kornit2-inspo4.jpg);
-    background-position: left 2em top 1em, left 1em bottom 1em, right 1em top 1em, right 4em bottom 1em;
+    background-position: left 2em top 1em, left 1em bottom 1em, right 1em top 1em, right 2em bottom 1em;
     background-size: 15%, 24%, 20%, 18%;
     background-repeat: no-repeat;
 }
@@ -581,7 +570,7 @@ button {
     cursor: pointer;
 }
 .home {
-    border: 2px solid;
+    border: 0 solid;
     outline: 2px solid;
     outline-color: #fff;
     outline-offset: 0px;
@@ -666,7 +655,7 @@ button {
 	text-decoration: none;
     cursor: pointer;
 }
-#menu li a:hover, .column li a:hover, #mobile .tablink a.active{
+#menu li a:hover, .timeline li a:hover, #mobile .tablink a.active{
     text-shadow: 0 0 50px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,1);
     font-weight: bolder;
     -webkit-transition: all 0.1s ease-in-out 0s;
@@ -741,34 +730,56 @@ button {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
 }
-/*timeline*/
-.timeline {
-    width: 100%;
-    height: auto; 
-    overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em; 
-}
-.column {
-    float: left;
-    width: 20%;
-    padding: 1em;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em; 
+/* timeline */
+.overlay-container {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    max-height: 100%;
     z-index: 1500;
+    overflow-y: auto;
 }
-.column ul {
-	margin: 0;
-	padding: 0;
+.timeline {
+    position: relative;
+    display: table;
+    height: 100%;
+    margin-top: 1rem;
 }
-.column li {
-    position: relative; 
-	display: block;
-	padding: .3em;
+.timeline span {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+    margin: 0;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
 }
-.column li span {font-weight: bolder;}
-.column li a, .social a, .tabContent a {
+.timeline section.year {position: relative;}
+.timeline section.year:first-child section {
+    margin-top: .5em;
+    padding-bottom: 0px;
+}
+.timeline section.year section {
+    position: relative;
+    margin-bottom: 2.2em;
+}
+.timeline section.year section ul {
+    list-style-type: none;
+    padding: 0 0 0 75px;
+    margin: -1.35rem 0 1em;
+    max-width: 32rem;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+.timeline section.year section ul:last-child {margin-bottom: 0;}
+.timeline section.year section ul li {
+    margin-left: .5rem;
+    display: block;
+}
+.timeline section.year section ul li:not(:first-child) {margin-top: .5rem;}
+.timeline li a, .social a, .tabContent a {
 	display: inline-block;
 	color: #000;
 	text-decoration: none;
